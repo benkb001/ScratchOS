@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+    {
+        "name": "Launch with GDB",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/kernel/kernel.elf",
+        "cwd": "${workspaceRoot}",
+        "args": [],
+        "targetArchitecture": "x86",
+        "MIMode": "gdb",
+        "miDebuggerPath": "/usr/bin/gdb",
+        "miDebuggerArgs": "",
+        "miDebuggerServerAddress": "localhost:1234",
+        "stopAtEntry": true,
+        "externalConsole": false,
+        
+        "setupCommands": [
+            {
+                "description": "Enable pretty-printing for gdb",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": true
+            }
+         
+
+        ],
+        "preLaunchTask": "Launch QEMU"
+    }
+    ]
+}
+
+

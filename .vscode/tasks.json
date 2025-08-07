@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "tasks": [{
+    "label": "Launch QEMU",
+    "type": "shell",
+    "windows": {
+        "command": "start -FilePath 'qemu-system-i386' -ArgumentList '-S -gdb tcp::1234 -boot d -cdrom os_image.bin -m 512'"
+    },
+    "linux": {
+        "command": "/usr/bin/qemu-system-i386 -gdb tcp::1234 -drive file=os_image.bin,format=raw,if=floppy -m 512 -daemonize"
+    }
+}
+]
+}
